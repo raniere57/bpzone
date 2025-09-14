@@ -16,6 +16,33 @@
 
       gtag('config', 'AW-17539368572');
     </script>
+    
+    <!-- Event snippet for bpzone conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      console.log('gtag_report_conversion called with URL:', url);
+      
+      // Send conversion event first
+      if (typeof gtag !== 'undefined') {
+        try {
+          gtag('event', 'conversion', {
+              'send_to': 'AW-17539368572/gSFbCOOVzpkbEPyMtqtB',
+              'value': 1.0,
+              'currency': 'USD',
+              'transaction_id': ''
+          });
+          console.log('Conversion event sent');
+        } catch (error) {
+          console.log('Error sending conversion event:', error);
+        }
+      }
+      
+      // Redirect immediately after sending the event
+      console.log('Redirecting to:', url);
+      window.location.href = url;
+      return false;
+    }
+    </script>
 </head>
 <body>
     <!-- Hero Section -->
@@ -40,14 +67,14 @@
                         </div>
                     </div>
                     <div class="cta-section">
-                        <button class="cta-button" onclick="goToOfficialStore()">
+                        <button class="cta-button" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">
                             Get BP Zone® Now - FREE Shipping
                         </button>
                         <p class="guarantee-text">180-Day Money-Back Guarantee</p>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="images/bp zone.png" alt="BP Zone Supplement" class="product-image" onclick="goToOfficialStore()" style="cursor: pointer;">
+                    <img src="images/bp zone.png" alt="BP Zone Supplement" class="product-image" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" style="cursor: pointer;">
                 </div>
             </div>
         </div>
@@ -110,7 +137,7 @@
                 </div>
             </div>
             <div class="solution-cta">
-                <button class="cta-button" onclick="goToOfficialStore()">
+                <button class="cta-button" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">
                     Get BP Zone® Now - FREE Shipping
                 </button>
             </div>
@@ -166,7 +193,7 @@
                         <h3>22 Delicious Meals for Healthy Blood Pressure</h3>
                         <p class="bonus-value">Value: $29.95 <span class="today-free">Today: FREE</span></p>
                         <p>Delicious recipes packed with natural ingredients shown to support healthy blood pressure levels. Each meal takes just minutes to make!</p>
-                        <button class="cta-button bonus-cta" onclick="goToOfficialStore()">Get This Bonus FREE</button>
+                        <button class="cta-button bonus-cta" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">Get This Bonus FREE</button>
                     </div>
                 </div>
                 <div class="bonus">
@@ -175,7 +202,7 @@
                         <h3>Forever Young: Science-Backed Secrets</h3>
                         <p class="bonus-value">Value: $29.95 <span class="today-free">Today: FREE</span></p>
                         <p>Complete guide to looking and feeling younger with science-backed habits for nutrition, exercise, stress relief, and better sleep.</p>
-                        <button class="cta-button bonus-cta" onclick="goToOfficialStore()">Get This Bonus FREE</button>
+                        <button class="cta-button bonus-cta" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">Get This Bonus FREE</button>
                     </div>
                 </div>
             </div>
@@ -213,7 +240,7 @@
         <div class="container">
             <h2>Ready to Take Control of Your Blood Pressure?</h2>
             <p>Join the thousands who have already made the switch to natural, effective blood pressure support</p>
-            <button class="cta-button" onclick="goToOfficialStore()">
+            <button class="cta-button" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">
                 Get BP Zone® Now - FREE Shipping
             </button>
         </div>
@@ -272,13 +299,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3><a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572" style="color: #4ecdc4; text-decoration: none;">Zenith Labs®</a></h3>
+                    <h3><a href="javascript:gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" style="color: #4ecdc4; text-decoration: none;">Zenith Labs®</a></h3>
                     <p>Doctor-formulated supplements for optimal health</p>
                 </div>
                 <div class="footer-links">
-                    <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572">Get BP Zone®</a>
-                    <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572">Order Now</a>
-                    <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572">Free Shipping</a>
+                    <a href="javascript:gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">Get BP Zone®</a>
+                    <a href="javascript:gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">Order Now</a>
+                    <a href="javascript:gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">Free Shipping</a>
                 </div>
             </div>
             <div class="footer-disclaimer">
