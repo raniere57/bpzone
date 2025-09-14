@@ -49,27 +49,34 @@
       gtag('config', 'AW-17539368572');
     </script>
     
-    <!-- Event snippet for bpzone conversion page -->
+    <!-- Event snippet for bpzone (1) conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
     function gtag_report_conversion(url) {
-      console.log('gtag_report_conversion called with URL:', url);
-      
-      if (typeof gtag !== 'undefined') {
-        try {
-          gtag('event', 'conversion', {
-              'send_to': 'AW-17539368572/gSFbCOOVzpkbEPyMtqtB',
-              'value': 1.0,
-              'currency': 'USD',
-              'transaction_id': ''
-          });
-          console.log('Conversion event sent');
-        } catch (error) {
-          console.log('Error sending conversion event:', error);
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
         }
+      };
+      
+      // Send conversion event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17539368572/eO3zCODb0JobEPyMtqtB',
+            'value': 1,
+            'currency': 'USD',
+            'transaction_id': '',
+            'event_callback': callback
+        });
       }
       
-      console.log('Redirecting to:', url);
-      window.location.href = url;
+      // Fallback: redirect after a short delay if callback doesn't work
+      setTimeout(function() {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      }, 1000);
+      
       return false;
     }
     </script>
