@@ -31,6 +31,11 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://bpzone.reviewandbuy.site/">
     
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.youtube.com">
+    
     <!-- Preload Critical Resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
     <link rel="preload" href="styles.css" as="style">
@@ -41,7 +46,7 @@
     <link rel="stylesheet" href="styles.css">
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17539368572"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-17539368572"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -135,7 +140,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="hero-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pC4XWqVJB4k?start=30" title="BP Zone Review Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" data-src="https://www.youtube.com/embed/pC4XWqVJB4k?start=30&rel=0&modestbranding=1" title="BP Zone Review Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="hero-cta">
                         <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572" target="_blank" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" class="cta-button secondary">
@@ -389,7 +394,7 @@
                 </div>
                 <div class="final-cta">
                     <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572" target="_blank" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" class="cta-button primary large">
-                        See Benefits on Official Site
+                        Buy on Official Site
                     </a>
                 </div>
             </div>
@@ -431,6 +436,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </body>
 </html>
