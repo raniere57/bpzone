@@ -53,31 +53,18 @@
     In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
     function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      
       // Send conversion event
       if (typeof gtag !== 'undefined') {
         gtag('event', 'conversion', {
             'send_to': 'AW-17539368572/eO3zCODb0JobEPyMtqtB',
             'value': 1,
             'currency': 'USD',
-            'transaction_id': '',
-            'event_callback': callback
+            'transaction_id': ''
         });
       }
       
-      // Fallback: redirect after a short delay if callback doesn't work
-      setTimeout(function() {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      }, 1000);
-      
-      return false;
+      // Let the target="_blank" handle the new tab opening
+      return true;
     }
     </script>
     
@@ -142,7 +129,7 @@
                 <p class="hero-subtitle">Complete Analysis: Ingredients, Results, Side Effects & Where to Buy</p>
                 <div class="hero-rating">
                     <div class="stars">★★★★★</div>
-                    <a href="javascript:void(0)" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" class="rating-text">4.9/5 Based on 46 Reviews</a>
+                    <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572" target="_blank" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" class="rating-text">4.9/5 Based on 46 Reviews</a>
                 </div>
             </div>
             <div class="hero-content">
@@ -151,13 +138,13 @@
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/pC4XWqVJB4k?start=30" title="BP Zone Review Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="hero-cta">
-                        <button class="cta-button secondary" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">
+                        <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572" target="_blank" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" class="cta-button secondary">
                             Learn More on Official Site
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <a href="javascript:void(0)" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">
+                    <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572" target="_blank" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">
                         <img src="images/bp zone.png" alt="BP Zone by Zenith Labs" class="product-image" loading="eager">
                     </a>
                 </div>
@@ -337,9 +324,9 @@
                         </div>
                     </div>
                     <p>Available only through the official Zenith Labs website. Free shipping included. Beware of counterfeit products on Amazon or other platforms.</p>
-                    <button class="cta-button primary large" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">
+                    <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572" target="_blank" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" class="cta-button primary large">
                         Check Price on Official Site
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -401,9 +388,9 @@
                     </div>
                 </div>
                 <div class="final-cta">
-                    <button class="cta-button primary large" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">
+                    <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572" target="_blank" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" class="cta-button primary large">
                         See Benefits on Official Site
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -418,7 +405,7 @@
             </div>
             <div class="modal-body">
                 <button class="modal-button review-btn" onclick="closeModal()">Read Review</button>
-                <button class="modal-button official-btn" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')">Official Page</button>
+                <a href="https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572" target="_blank" onclick="gtag_report_conversion('https://hop.clickbank.net/?affiliate=raniere57&vendor=bpzone&v=cb&tid=17539368572')" class="modal-button official-btn">Official Page</a>
             </div>
         </div>
     </div>
